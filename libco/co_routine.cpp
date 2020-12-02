@@ -116,7 +116,7 @@ static unsigned long long GetTickMS()
 	return counter() / khz;
 #else
 	struct timeval now = { 0 };
-	gettimeofday( &now,NULL );
+	gettimeofday( &now,NULL );//获取系统时间
 	unsigned long long u = now.tv_sec;
 	u *= 1000;
 	u += now.tv_usec / 1000;
@@ -882,7 +882,7 @@ static short EpollEvent2Poll( uint32_t events )
 	return e;
 }
 
-
+// 每个线程里最多204800个协程
 static stCoRoutineEnv_t* g_arrCoEnvPerThread[ 204800 ] = { 0 };
 
 // 初始化当前线程的协程管理器

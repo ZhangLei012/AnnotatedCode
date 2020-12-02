@@ -189,7 +189,7 @@ int main(int argc,char *argv[])
 	
 	struct sigaction sa;
 	sa.sa_handler = SIG_IGN;
-	sigaction( SIGPIPE, &sa, NULL );
+	sigaction( SIGPIPE, &sa, NULL );// 忽略PIPE信号，是实现异步网络连接的其中一个步骤
 	
 	for(int k=0;k<proccnt;k++)
 	{

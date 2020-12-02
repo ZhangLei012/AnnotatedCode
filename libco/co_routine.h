@@ -51,7 +51,7 @@ struct stCoEpoll_t;
 typedef int (*pfn_co_eventloop_t)(void *);
 typedef void *(*pfn_co_routine_t)(void *);
 
-//2.co_routine
+//2.co_routine，这些都是协程原语
 
 int 	co_create( stCoRoutine_t **co,const stCoRoutineAttr_t *attr,void *(*routine)(void*),void *arg );
 void    co_resume( stCoRoutine_t *co );

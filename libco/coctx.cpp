@@ -116,7 +116,7 @@ int coctx_make( coctx_t *ctx,coctx_pfn_t pfn,const void *s,const void *s1 )
 int coctx_make( coctx_t *ctx,coctx_pfn_t pfn,const void *s,const void *s1 )
 {
 	char *sp = ctx->ss_sp + ctx->ss_size;
-	sp = (char*) ((unsigned long)sp & -16LL  );
+	sp = (char*) ((unsigned long)sp & -16LL  );// TODO: 没看懂
 
 	memset(ctx->regs, 0, sizeof(ctx->regs));
 

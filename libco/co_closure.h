@@ -21,7 +21,7 @@
 struct stCoClosure_t 
 {
 public:
-	virtual void exec() = 0;
+	virtual void exec() = 0;// 纯虚函数
 };
 
 //1.base 

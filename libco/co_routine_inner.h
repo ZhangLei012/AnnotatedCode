@@ -60,6 +60,7 @@ struct stCoRoutine_t
 	coctx_t ctx; // 协程上下文，包括寄存器和栈
  
 	// 以下用char表示了bool语义，节省空间
+	// TODO: （但是好像bool也是1个字节，不知道是怎么个节省法？）
 	char cStart;          // 是否已经开始运行了
 	char cEnd;            // 是否已经结束
 	char cIsMain;         // 是否是主协程
